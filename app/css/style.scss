@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+   box-sizing: border-box;
+   color: white;
+   font-family: "Ubuntu", sans-serif;
+}
+
+body {
+   background-color: #393939;
+}
+
+#chat-container {
+   height: clamp(450px, 80vh, 900px);
+
+   aspect-ratio: 4/6;
+   background-color: rgb(64, 64, 73);
+
+   margin: 50px auto;
+
+   border-radius: 5px;
+
+   display: grid;
+   grid-template-rows: 40px auto 40px;
+
+   #color_picker_div {
+      background-color: #393939;
+      padding-bottom: 20px;
+   }
+
+   #real-chat {
+      position: relative;
+      width: 100%;
+
+      * {
+         word-wrap: break-word;
+      }
+
+      .message-container {
+         padding: 5px;
+         max-width: 100%;
+         padding: 5px 3px;
+      }
+      .info-div {
+         background-color: #4a4a61;
+         padding: 5px 3px;
+      }
+      .shadow-text {
+         text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+         font-weight: bold;
+      }
+
+      // ------------------
+      // tiny scrollbar
+      // ------------------
+      .viewport {
+         height: 100%;
+         width: 100%;
+         overflow: hidden;
+         position: relative;
+         padding: 0;
+      }
+
+      .overview {
+         list-style: none;
+         position: absolute;
+         left: 0;
+         top: 0;
+         margin: 0;
+
+         width: 100%;
+      }
+
+      .scrollbar {
+         position: absolute;
+         background-position: 0 0;
+         right: 0;
+         top: 0;
+         width: 15px;
+
+         z-index: 7;
+
+         transition: ease 0.2s all;
+
+         &:hover {
+            background-color: rgba(255, 255, 255, 0.59);
+         }
+      }
+
+      .track {
+         height: 100%;
+         width: 100%;
+         position: relative;
+         padding: 0 1px;
+      }
+
+      .thumb {
+         background-color: rgb(118, 118, 118);
+         border-radius: 20px;
+         height: 20px;
+         width: 100%;
+         overflow: hidden;
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+
+      .thumb .end {
+         overflow: hidden;
+         height: 5px;
+         width: 100%;
+      }
+
+      .disable {
+         display: none;
+      }
+   }
+
+   #message-container {
+      display: grid;
+      grid-template-columns: auto 40px;
+      z-index: 8;
+
+      input {
+         background-color: rgb(109, 109, 109);
+
+         outline: 0;
+         border: 0;
+
+         padding-left: 5px;
+         font-size: 18px;
+      }
+      #enter-message {
+         background-color: rgb(46, 44, 44);
+         background-image: url("../images/send.png");
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         border: 0;
+
+         cursor: pointer;
+      }
+   }
+}
+
+.noSelect {
+   user-select: none;
+   -o-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}

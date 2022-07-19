@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link href="./libs/emoticons/stylesheets/jquery.cssemoticons.css" media="screen" rel="stylesheet" type="text/css" />
+
+   <link rel="stylesheet" href="./css/style.css">
+
+   <!-- <script src="./libs/emoticons/javascripts/jquery-1.4.2.min.js"></script> -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="./libs/emoticons/javascripts/jquery.cssemoticons.js"></script>
+
+
+   <script src="./libs/tiny_scrollbar/jquery.tinyscrollbar.js"></script>
+
+
+   <script src="./js/main.js" type="module"></script>
+</head>
+
+<body>
+   <div id="chat-container">
+      <div id="color_picker_div">
+         <input type="color" id="color_input">
+         <span id="color_span"></span>
+      </div>
+      <div id="real-chat">
+
+         <div class="scrollbar">
+            <div class="track">
+               <div class="thumb">
+                  <div class="end"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="viewport">
+            <div class="overview">
+               <div class="info-div" style="padding-left:25px">/help - pomoc </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="message-container">
+         <input type="text" id="message-input" autocomplete="off">
+         <button id="enter-message"></button>
+      </div>
+   </div>
+</body>
+
+</html>
